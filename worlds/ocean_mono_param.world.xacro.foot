@@ -1,0 +1,19 @@
+
+    <!-- Wind -->
+    <plugin name="wind" filename="libusv_gazebo_wind_plugin.so">
+      <wind_objs>
+        <wind_obj>
+          <name>wamv</name>
+          <link_name>base_link</link_name>
+          <coeff_vector>.5 .5 .33</coeff_vector>
+        </wind_obj>
+      </wind_objs>
+      <wind_direction>270.0</wind_direction> <!-- degrees -->
+      <wind_mean_velocity>0.0</wind_mean_velocity> <!-- m/s -->
+      <var_wind_gain_constants>0</var_wind_gain_constants>
+      <var_wind_time_constants>1</var_wind_time_constants>
+      <random_seed>0</random_seed> <!-- set to zero/empty to randomize -->
+      <update_rate>10</update_rate>
+    </plugin>
+  </world>
+</sdf>
