@@ -195,7 +195,7 @@ if __name__ == '__main__':
                                 gui='false', amplitude=a, Y=yaw)
 
 
-
+    '''
     # Manuevering experiments
     exp_label = 'manuevering'
     exp_dir = make_experimentdir(logdir, exp_label)
@@ -215,4 +215,4 @@ if __name__ == '__main__':
         run_mono_experiment(exp_dir,
                             amplitude=0, gui='false', thrust=(left, right))
     
-
+    '''
