@@ -5,6 +5,7 @@ import time
 import subprocess
 import math
 from datetime import datetime
+import numpy as np
 
 from argparse import ArgumentParser
 
@@ -174,6 +175,7 @@ if __name__ == '__main__':
         
         exp_label = label
         exp_dir = make_experimentdir(logdir, exp_label)
+        '''
         amplitudes = [0.00,
                       0.21,
                       0.34,
@@ -185,14 +187,17 @@ if __name__ == '__main__':
                       1.22,
                       1.52,
                       1.83]
+        '''
+        period = 6.0
+        amplitudes = np.linspace(0.0, 1.0, 11)
         for a, i in zip(amplitudes, range(len(amplitudes))):
             print"****************************************"
             print" Running %d of %d "%(i,len(amplitudes))
             for r in range(10):
                 print"****************************************"
 
-            run_mono_experiment(exp_dir,
-                                gui='false', amplitude=a, Y=yaw)
+            run_mono_experiment(exp_dir, gui='false',
+                                amplitude=a, period=period, Y=yaw)
 
 
     '''
